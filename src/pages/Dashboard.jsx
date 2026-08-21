@@ -12,7 +12,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     getReviews()
-      .then(setReviews)
+     .then((data) => setReviews(data.reviews))
       .catch(() => setError('Could not load your review history. Is the backend running?'))
       .finally(() => setLoading(false))
   }, [])
