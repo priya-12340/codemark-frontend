@@ -1,0 +1,132 @@
+.page {
+  min-height: 100vh;
+  background: var(--ink);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+}
+
+.back {
+  display: inline-block;
+  color: var(--text-ink-dim);
+  font-size: 0.88rem;
+  margin-bottom: 28px;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.status, .error {
+  padding: 40px;
+  color: var(--text-ink-dim);
+}
+
+.error {
+  color: var(--sev-critical);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin: 0 0 4px;
+  text-transform: capitalize;
+}
+
+.date {
+  color: var(--text-ink-dim);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sectionTitle {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-ink-dim);
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.editorFrame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line-on-ink);
+}
+
+.issuesColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.clean {
+  color: var(--sev-good);
+  font-family: var(--font-mono);
+}
+
+.issue {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border-left: 4px solid var(--sev-minor);
+}
+
+.issue.critical { border-left-color: var(--sev-critical); }
+.issue.warning { border-left-color: var(--sev-warning); }
+.issue.minor { border-left-color: var(--sev-minor); }
+
+.issueHeader {
+  margin-bottom: 8px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-paper-dim);
+}
+
+.issueDesc {
+  color: var(--text-paper);
+  font-size: 0.94rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.fix {
+  background: var(--ink);
+  color: var(--sev-good);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 12px 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre-wrap;
+}

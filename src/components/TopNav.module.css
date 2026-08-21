@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--line-on-ink);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--amber);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.user {
+  font-size: 0.9rem;
+  color: var(--text-ink-dim);
+}
+
+.logout {
+  background: none;
+  border: 1px solid var(--line-on-ink);
+  color: var(--text-ink);
+  padding: 8px 16px;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.logout:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
