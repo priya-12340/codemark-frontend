@@ -18,7 +18,7 @@ React frontend for the Codemark AI code review assistant. Users submit code thro
 - Code submission via the Monaco Editor, or by uploading a file directly
 - Review dashboard with paginated history
 - Review detail view — original code alongside severity-tagged issues and suggested fixes
-- Light/dark theme toggle
+
 
 ## Project Structure
 
