@@ -10,6 +10,19 @@ client.interceptors.request.use((config) => {
   return config
 })
 
+client.interceptors.response.use(
+  (res) => res,
+  (err) => {
+    const isAuthCall = err.config?.url?.includes('/api/auth/')
+    if (err.response?.status === 401 && !isAuthCall) {
+      sessionStorage.removeItem('token')
+      sessionStorage.removeItem('user')
+      window.location.href = '/login'
+    }
+    return Promise.reject(err)
+  }
+)
+
 export async function signup(name, email, password) {
   const res = await client.post('/api/auth/signup', { name, email, password })
   return res.data
