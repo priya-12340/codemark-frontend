@@ -27,6 +27,10 @@ export default function App() {
             path="/reviews/:id"
             element={<ProtectedRoute><ReviewDetail /></ProtectedRoute>}
           />
+          <Route
+            path= "*"
+            element={<Navigate to="/dashboard" replace />} 
+          />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
